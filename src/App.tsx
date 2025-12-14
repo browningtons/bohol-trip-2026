@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { 
-  Plane, MapPin, Calendar, Gift, User, Coffee, Shield, 
+  Plane, Calendar, Gift, User, Coffee, Shield, 
   Map as MapIcon, Utensils, Mountain, Anchor, 
   AlertTriangle, 
   CheckSquare, Coins, Wallet, 
@@ -16,14 +16,14 @@ interface MapLocation {
   desc: string;
 }
 
-interface ItineraryItem {
-  date: string;
-  title: string;
-  time: string;
-  icon: React.ElementType;
-  type: 'travel' | 'activity';
-  details: string;
-}
+// interface ItineraryItem {
+//   date: string;
+//   title: string;
+//   time: string;
+//   icon: React.ElementType;
+//   type: 'travel' | 'activity';
+//   details: string;
+// }
 
 interface WingmanSection {
   id: string;
