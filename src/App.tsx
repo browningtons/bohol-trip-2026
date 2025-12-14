@@ -387,6 +387,8 @@ export default function App() {
   };
 
   return (
+  <div>
+    {/* ITINERARY LIST (data usage only) */}
     <div className="space-y-4">
       <h2 className="text-xl font-bold">Itinerary</h2>
 
@@ -825,8 +827,9 @@ export default function App() {
             </button>
           ))}
         </nav>
-
       </div>
     </div>
+  </div>  
+
   );
 }
