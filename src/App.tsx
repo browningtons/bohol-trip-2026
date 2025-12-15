@@ -454,7 +454,13 @@ export default function App() {
         {/* MOBILE HEADER */}
         <header className="md:hidden bg-white/80 backdrop-blur-md p-4 border-b border-[var(--border)] z-30 flex items-center justify-between flex-shrink-0">
           <div className="flex items-center gap-3">
-            <div className="bg-[var(--heading-color)] text-white p-2 rounded-lg"><Plane size={18} /></div>
+            <div className="bg-blue-600 p-1.5 rounded-lg">
+              <img
+                src="/bohol-icon.png"
+                alt="Bohol Trip Icon"
+                className="h-4 w-4"
+              />
+            </div>
             <div>
               <div className="font-bold text-[var(--heading-color)]">Bohol 2026</div>
             </div>
