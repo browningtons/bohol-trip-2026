@@ -385,6 +385,9 @@ export default function App() {
               src="/bohol-icon.png"
               alt="Bohol Trip Icon"
               className="h-5 w-5"
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).style.display = 'none';
+              }}
             />
           </div>
           <div>
