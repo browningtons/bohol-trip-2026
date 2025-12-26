@@ -377,10 +377,15 @@ export default function App() {
         }
       `}</style>
       
-      {/* SIDEBAR (Desktop Fixed) */}
+      {/* SIDEBAR */}
       <aside className="hidden md:flex md:w-72 md:flex-col md:bg-white md:border-r md:border-[var(--border)] z-50 shadow-sm flex-shrink-0 h-full overflow-y-auto">
         <div className="flex items-center gap-3 p-8 border-b border-[var(--border)]">
-          <div className="bg-[var(--heading-color)] text-white p-2.5 rounded-xl shadow-lg shadow-blue-900/20"><Plane size={24} /></div>
+          <img
+            src="/panglao-icon.png"
+            alt="Panglao"
+            className="h-12 w-12 transition-transform hover:scale-105"
+           />
+          </div>
           <div>
             <h1 className="font-bold text-xl text-[var(--heading-color)] tracking-tight">Bohol 2026</h1>
             <p className="text-xs font-medium text-[var(--accent-secondary)] uppercase tracking-wider">Brown Brothers Trip</p>
@@ -448,7 +453,11 @@ export default function App() {
         {/* MOBILE HEADER */}
         <header className="md:hidden bg-white/80 backdrop-blur-md p-4 border-b border-[var(--border)] z-30 flex items-center justify-between flex-shrink-0">
           <div className="flex items-center gap-3">
-            <div className="bg-[var(--heading-color)] text-white p-2 rounded-lg"><Plane size={18} /></div>
+            <img
+              src="/panglao-icon.png"
+              alt="Panglao"
+              className="h-9 w-9"
+            />
             <div>
               <div className="font-bold text-[var(--heading-color)]">Bohol 2026</div>
             </div>
