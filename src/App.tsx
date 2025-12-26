@@ -384,13 +384,15 @@ export default function App() {
             src="/panglao-icon.png"
             alt="Panglao"
             className="h-12 w-12 transition-transform hover:scale-105"
-           />
-          </div>
+          />
           <div>
-            <h1 className="font-bold text-xl text-[var(--heading-color)] tracking-tight">Bohol 2026</h1>
-            <p className="text-xs font-medium text-[var(--accent-secondary)] uppercase tracking-wider">Brown Brothers Trip</p>
+            <h1 className="font-bold text-xl text-[var(--heading-color)] tracking-tight">Panglao 2026</h1>
+            <p className="text-xs font-medium text-[var(--accent-secondary)] uppercase tracking-wider">
+              Brown Brothers Trip
+            </p>
           </div>
         </div>
+
         <nav className="flex-1 p-6 space-y-2">
           {['itinerary', 'activities', 'culture', 'map'].map((tab) => (
             <React.Fragment key={tab}>
@@ -451,24 +453,21 @@ export default function App() {
       <div className="flex-1 flex flex-col h-full overflow-hidden relative">
         
         {/* MOBILE HEADER */}
-        <header className="md:hidden bg-white/80 backdrop-blur-md p-4 border-b border-[var(--border)] z-30 flex items-center justify-between flex-shrink-0">
-          <div className="flex items-center gap-3">
-            <img
-              src="/panglao-icon.png"
-              alt="Panglao"
-              className="h-11 w11"
-            />
-            <div>
-              <div className="font-bold text-[var(--heading-color)]">
-                Panglao 2026
-              </div>
-            </div>
-          </div>
 
-          <div className="bg-[var(--accent-primary)] text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg shadow-orange-500/20">
-            {daysLeft} Days
-          </div>
-        </header>
+          <header className="md:hidden bg-white/80 backdrop-blur-md p-4 border-b border-[var(--border)] z-30 flex items-center justify-between flex-shrink-0">
+            <div className="flex items-center gap-3">
+              <img
+                src="/panglao-icon.png"
+                alt="Panglao"
+                className="h-10 w-10"
+              />
+              <div className="font-bold text-[var(--heading-color)]">Panglao 2026</div>
+            </div>
+
+            <div className="bg-[var(--accent-primary)] text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg shadow-orange-500/20">
+              {daysLeft} Days
+            </div>
+          </header>
 
         {/* MAIN CONTENT AREA */}
         <main className={`flex-1 relative ${activeTab === 'map' ? 'overflow-hidden' : 'overflow-y-auto p-4 md:p-10'}`}>
@@ -817,6 +816,7 @@ export default function App() {
         </main>
 
         {/* MOBILE NAV BOTTOM */}
+
         <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-[var(--border)] flex justify-around p-2 pb-safe z-40 shadow-[0_4px_20px_rgba(0,0,0,0.05)]">
           {['itinerary', 'activities', 'culture', 'map'].map((tab) => (
             <button
@@ -828,17 +828,19 @@ export default function App() {
                   : 'text-slate-400'
               }`}
             >
-              {/* ICONS */}
-              {tab === 'itinerary' && (
+              {tab === 'itinerary' ? (
                 <img
                   src="/panglao-icon.png"
                   alt="Panglao"
                   className="h-6 w-6"
                 />
+              ) : tab === 'activities' ? (
+                <Calendar size={20} />
+              ) : tab === 'culture' ? (
+                <Gift size={20} />
+              ) : (
+                <MapIcon size={20} />
               )}
-              {tab === 'activities' && <Calendar size={20} />}
-              {tab === 'culture' && <Gift size={20} />}
-              {tab === 'map' && <MapIcon size={20} />}
 
               <span className="text-[9px] font-bold mt-1 capitalize tracking-tight">
                 {tab === 'culture' ? 'Intel' : tab}
@@ -846,7 +848,6 @@ export default function App() {
             </button>
           ))}
         </nav>
-
       </div>
     </div>
   );
